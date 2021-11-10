@@ -51,7 +51,7 @@ _______________________________________________________________
   <os>
 
   <cpu mode="host-passthrough" check="none" migratable="on">
-    <topology sockets="1" dies="1" cores="8" threads=""/>
+    <topology sockets="1" dies="1" cores="8" threads="1"/>
   </cpu>
   
 ```
