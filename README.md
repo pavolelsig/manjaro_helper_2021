@@ -45,8 +45,8 @@ _______________________________________________________________
     <vcpupin vcpu="5" cpuset="5"/>
     <vcpupin vcpu="6" cpuset="6"/>
     <vcpupin vcpu="7" cpuset="7"/>
-    <emulatorpin cpuset="16-17"/>
-    <iothreadpin iothread="1" cpuset="18-19"/>
+    <emulatorpin cpuset="8-9"/>
+    <iothreadpin iothread="1" cpuset="10-11"/>
   </cputune>
   <os>
 
