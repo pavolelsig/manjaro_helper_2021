@@ -75,7 +75,7 @@ else
 	read TPM
 		if [ $TPM = y ]
 		then
-			pacman -S swtmp
+			pacman -S swtpm
 			
 		fi
 fi
