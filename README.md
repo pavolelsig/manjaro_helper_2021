@@ -24,13 +24,9 @@ For a tutorial, go here:<br/>
         <direct state="on"/>
       </stimer>
       <reset state="on"/>
-      <vendor_id state="on" value="PC"/>
       <frequencies state="on"/>
       <reenlightenment state="on"/>
     </hyperv>
-    <kvm>
-      <hidden state="on"/>
-    </kvm>
     <vmport state="off"/>
   </features>
 ```
