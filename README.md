@@ -42,13 +42,13 @@ _______________________________________________________________
   <iothreads>1</iothreads>
   <cputune>
     <vcpupin vcpu="0" cpuset="0"/>
-    <vcpupin vcpu="1" cpuset="2"/>
-    <vcpupin vcpu="2" cpuset="4"/>
-    <vcpupin vcpu="3" cpuset="6"/>
-    <vcpupin vcpu="4" cpuset="8"/>
-    <vcpupin vcpu="5" cpuset="10"/>
-    <vcpupin vcpu="6" cpuset="12"/>
-    <vcpupin vcpu="7" cpuset="14"/>
+    <vcpupin vcpu="1" cpuset="1"/>
+    <vcpupin vcpu="2" cpuset="2"/>
+    <vcpupin vcpu="3" cpuset="3"/>
+    <vcpupin vcpu="4" cpuset="4"/>
+    <vcpupin vcpu="5" cpuset="5"/>
+    <vcpupin vcpu="6" cpuset="6"/>
+    <vcpupin vcpu="7" cpuset="7"/>
     <emulatorpin cpuset="16-17"/>
     <iothreadpin iothread="1" cpuset="18-19"/>
   </cputune>
