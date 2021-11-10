@@ -16,18 +16,21 @@ For a tutorial, go here:<br/>
     <hyperv>
       <relaxed state="on"/>
       <vapic state="on"/>
-      <spinlocks state="on" retries="4096"/>
+      <spinlocks state="on" retries="8192"/>
       <vpindex state="on"/>
       <runtime state="on"/>
       <synic state="on"/>
       <stimer state="on">
-        <direct state="on"/>
+      <direct state="on"/>
       </stimer>
       <reset state="on"/>
       <frequencies state="on"/>
       <reenlightenment state="on"/>
-    </hyperv>
-    <vmport state="off"/>
+      </hyperv>
+      <kvm>
+        <hidden state="on"/>
+      </kvm>
+      <vmport state="off"/>
   </features>
 ```
 
