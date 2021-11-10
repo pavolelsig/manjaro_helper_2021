@@ -8,7 +8,7 @@ Passthrough helper for Manjaro simplifies installing required packages and sets 
 For a tutorial, go here:<br/>
 
 # Performance optimizations
-
+```
 
   <features>
     <acpi/>
@@ -33,10 +33,11 @@ For a tutorial, go here:<br/>
     </kvm>
     <vmport state="off"/>
   </features>
+```
 
 _______________________________________________________________
-CPU pinning
-
+# CPU core pinning
+```
   <vcpu placement="static">8</vcpu>
   <iothreads>1</iothreads>
   <cputune>
@@ -57,15 +58,17 @@ CPU pinning
     <topology sockets="1" dies="1" cores="8" threads=""/>
   </cpu>
   
-_______________________________________________________________
-AMD GPU hypervisor detection
-  
+```
+__________________________________________________________________
+# AMD GPU hypervisor detection
+```
   <hyperv>
     
     <vendor_id state='on' value='notavm'/>
     
   </hyperv>
 _______________________________________________________________
+```
   
 # Sources
 * https://wiki.archlinux.org/index.php/PCI_passthrough_via_OVMF#Using_identical_guest_and_host_GPUs
