@@ -40,7 +40,6 @@ _______________________________________________________________
     <emulatorpin cpuset="8-9"/>
     <iothreadpin iothread="1" cpuset="10"/>
   </cputune>
-  <os>
 
   
 ```
