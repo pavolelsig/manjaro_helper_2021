@@ -9,14 +9,8 @@ For a tutorial, go here:<br/>
 
 # Performance optimizations
 ```
-
-  <features>
-    <acpi/>
-    <apic/>
     <hyperv>
-      <relaxed state="on"/>
-      <vapic state="on"/>
-      <spinlocks state="on" retries="8192"/>
+.......
       <vpindex state="on"/>
       <runtime state="on"/>
       <synic state="on"/>
@@ -26,12 +20,7 @@ For a tutorial, go here:<br/>
       <reset state="on"/>
       <frequencies state="on"/>
       <reenlightenment state="on"/>
-      </hyperv>
-      <kvm>
-        <hidden state="on"/>
-      </kvm>
-      <vmport state="off"/>
-  </features>
+
 ```
 
 _______________________________________________________________
@@ -49,13 +38,10 @@ _______________________________________________________________
     <vcpupin vcpu="6" cpuset="6"/>
     <vcpupin vcpu="7" cpuset="7"/>
     <emulatorpin cpuset="8-9"/>
-    <iothreadpin iothread="1" cpuset="10-11"/>
+    <iothreadpin iothread="1" cpuset="10"/>
   </cputune>
   <os>
 
-  <cpu mode="host-passthrough" check="none" migratable="on">
-    <topology sockets="1" dies="1" cores="8" threads="1"/>
-  </cpu>
   
 ```
 __________________________________________________________________
