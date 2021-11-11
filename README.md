@@ -6,6 +6,7 @@ Passthrough helper for Manjaro simplifies installing required packages and sets 
 
 # Tutorial
 For a tutorial, go here:<br/>
+https://youtu.be/l-dnCQ2vPxw
 
 # Performance optimizations
 ```
