@@ -96,15 +96,15 @@ cp vfio.conf /etc/modprobe.d/
 
 # Edit mkinitcpio.conf
 
-MODULES='MODULES="vfio_pci vfio vfio_iommu_type1 vfio_virqfd"'
-FILES='FILES="/usr/bin/vfio-pci-override.sh"'
-HOOKS='HOOKS="base vfio udev autodetect modconf block keyboard keymap filesystems fsck"'
+MODULES='vfio_pci vfio vfio_iommu_type1 vfio_virqfd'
+FILES='/usr/bin/vfio-pci-override.sh'
+HOOKS='vfio'
 
 cp /etc/mkinitcpio.conf new_mkinitcpio
 
-sed -i -e "s|^MODULES=.*|${MODULES}|" new_mkinitcpio
-sed -i -e "s|^FILES=.*|${FILES}|" new_mkinitcpio
-sed -i -e "s|^HOOKS=\"base udev autodetect.*|${HOOKS}|" new_mkinitcpio
+sed -i -e "s|^MODULES=(\(.*\))|MODULES=(${MODULES} \1)|" new_mkinitcpio
+sed -i -e "s|^FILES=(\(.*\))|FILES=(${FILES} \1)|" new_mkinitcpio
+sed -i -e "\|^HOOKS=| s|base udev|base ${HOOKS} udev|" new_mkinitcpio
 
 #User verification of new mkinitcpio and prompt to manually edit it
 echo 
