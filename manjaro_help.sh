@@ -102,9 +102,13 @@ HOOKS='vfio'
 
 cp /etc/mkinitcpio.conf new_mkinitcpio
 
-sed -i -e "s|^MODULES=(\(.*\))|MODULES=(${MODULES} \1)|" new_mkinitcpio
-sed -i -e "s|^FILES=(\(.*\))|FILES=(${FILES} \1)|" new_mkinitcpio
-sed -i -e "\|^HOOKS=| s|base udev|base ${HOOKS} udev|" new_mkinitcpio
+sed -i "\|^MODULES=| s|(\(.*\))|(${MODULES} \1)|" new_mkinitcpio
+sed -i "\|^MODULES=| s|\"\(.*\)\"|\"${MODULES} \1\"|" new_mkinitcpio
+
+sed -i "\|^FILES=| s|(\(.*\))|(${FILES} \1)|" new_mkinitcpio
+sed -i "\|^FILES=| s|\"\(.*\)\"|\"${FILES} \1\"|" new_mkinitcpio
+
+sed -i "\|^HOOKS=| s|base\(.*\) udev|base ${HOOKS}\1 udev|" new_mkinitcpio
 
 #User verification of new mkinitcpio and prompt to manually edit it
 echo 
