@@ -10,9 +10,9 @@ if [ -a /etc/initcpio/install/vfio ]
 		rm /etc/initcpio/install/vfio
 fi
 
-if [ -a rm /etc/initcpio/hooks/vfio ]
+if [ -a /etc/initcpio/hooks/vfio ]
 	then
-		rm rm /etc/initcpio/hooks/vfio
+		rm /etc/initcpio/hooks/vfio
 fi
 
 if [ -a /etc/modprobe.d/vfio.conf ]
